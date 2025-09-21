@@ -6,11 +6,12 @@ for(let count = startOfRange; count <= endOfRnage ; count++){
     let auxilaryNum = inputNum * 10;
     let unitNum = 0;
     let sum = 0;
+    const noOfDigits = 4;
 
-    for(let count1 = 1; count1 <= 4 ;count1++){
+    for(let count1 = 1; count1 <= noOfDigits ;count1++){
         auxilaryNum = (auxilaryNum - unitNum) / 10;
         unitNum = auxilaryNum % 10;
-        sum = sum + (unitNum ** 4);
+        sum = sum + (unitNum ** noOfDigits);
     }
 
     if(sum === inputNum){
